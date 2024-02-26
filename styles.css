@@ -254,6 +254,11 @@ footer{
         max-width: 100%;
         height: auto;
     }
+
+    footer{
+        background-color: var(--color-light-gray);
+        color: var(--color-dark-gray);
+    }
 }
 
 @media only screen and (min-width: 600px){
