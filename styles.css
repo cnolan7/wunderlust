@@ -149,7 +149,7 @@ footer{
     }
 
     h1, h2, h3{
-        font-family: 'Molle' cursive;
+        font-family: 'Molle', cursive;
         color: var(--color-purple);
     }
 
@@ -254,6 +254,40 @@ footer{
         height: auto;
     }
 
+    #about div, #contact form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about section, #contact div {
+        margin: 20px 0;
+    }
+
+    #about img, #contact img{
+        width: 50%;
+        margin: 5px 0;
+    }
+
+
+    #contact form div{
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #contact form label, #contact form input, #contact form select, #contact form .custom-select{
+        width: 100%;
+        margin: 5px 0;
+    }
+    #conact input[type="submit"]{
+        background-color: #55BCD5;
+        color:#FFFFFF;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+
+    }
+
     footer{
         background-color: var(--color-light-gray);
         color: var(--color-dark-gray);
@@ -261,21 +295,193 @@ footer{
 }
 
 @media only screen and (min-width: 600px){
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px
+    }
+
+    nav ul{
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
     
+    nav ul li{
+        margin-left: 20px;
+    }
+    
+    nav ul li a{
+        text-decoration: none;
+        color:#222222;
+        font-weight: 600;
+    }
+
+    #intro, #plan, #testimonials, #about, #contact{
+        padding: 20px;
+    }
+    
+    #img-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #about div, #contact form{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #about section, #contact div{
+        width: 45%;
+    }
+
+    #contact form div{
+        width: 45%;
+    }
+
+    #contact form label, #contact form input, #contact form select, #contact form .custom-select{
+        width: auto;
+    }
+
+    footer{
+        background-color: var(--color-light-gray);
+        color: var(--color-dark-gray);
+    }
 }
 
 @media (min-width: 992px) {
 
-    header, nav, main, footer{
-        padding-left: 2rem;
-        padding-right: 2rem;
+    header{
+        justify-content: start;
     }
 
     nav ul{
-        text-align: center;
+        padding-left: 0;
     }
 
-    nav li{
-        display: inline;
+    #main-content{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px
+    }
+
+    #img-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #plan div, #testimonials div, #about div{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #about{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+        color: #499BD2
+    }
+
+    #about div{
+        margin: 20px
+    }
+
+    #about img{
+        margin: 0 auto;
+        width: 80px;
+        height: auto;
+    }
+
+    #about h4{
+        margin-top: 10px;
+        font-weight: 600;
+        color: #222222;
+
+    }
+
+    #about p{
+        font-size: 0.9rem;
+        color: #555;
+
+    }
+    #about div, #contact form{
+        justify-content: space-between;
+    }
+
+    #about section, #contact div{
+        width: calc(25% - 20px);
+        margin: 0 10px;
+    }
+
+    #contact{
+        background-color: #EAEAEA;
+        padding: 40px;
+    }
+
+    #contact form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        align-items: center;
+    }
+
+    #contact label{
+        display: block;
+        margin-bottom: 5px;
+        color:#222222;
+    }
+
+    #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact select{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #d5d5d5;
+    }
+
+    #contact input[type="submit"]{
+        grid-column: span 2;
+        padding: 15px;
+        background-color: #9B26B0;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    #contact .radio-input{
+        margin-right: 10px;
+    }
+
+    #contact .radio-label{
+        color: #222222;
+    }
+
+    #contact .required {
+        color:#9B26B0;
+    }
+
+    #contact form div{
+        width: calc(50% - 20px);
+    }
+
+    #contact form div#names, #contact form div#nums, #contact form div#selects{
+        grid-column: span 2;
+    }
+
+    #contact form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #contact input[type="submit"]{
+        max-width: 200px;
+    }
+
+    footer{
+        background-color: var(--color-light-gray);
+        color: var(--color-dark-gray);
     }
 }
